@@ -1,0 +1,18 @@
+@use "../global/flex" as *;
+
+.button {
+  @include flex;
+  gap: 14px;
+  padding: 13px 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--grey);
+  background-color: var(--white);
+  border: var(--border);
+
+  &:hover {
+    transition: var(--ease);
+    color: var(--white);
+    background-color: var(--blue);
+  }
+}
