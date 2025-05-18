@@ -1,0 +1,16 @@
+<script lang="ts" setup>
+console.log('loaded')
+</script>
+
+<template>
+  <section class="layout">
+    <LayoutSidebar />
+    <div class="layout__wrapper">
+      <slot class="layout__slot" />
+    </div>
+  </section>
+</template>
+
+<style lang="scss" scoped>
+@use '@/assets/scss/layouts/default.scss';
+</style>
