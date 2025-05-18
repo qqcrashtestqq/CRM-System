@@ -5,7 +5,7 @@ console.log('loaded')
 <template>
   <section class="layout">
     <LayoutSidebar />
-    <div class="layout__wrapper">
+    <div class="container layout__wrapper">
       <slot class="layout__slot" />
     </div>
   </section>

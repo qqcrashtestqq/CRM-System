@@ -1,3 +1,35 @@
+@use 'sass:map';
+
+$status-colors: (
+  true: (
+    bg: var(--green-pink),
+    border: var(--green),
+    text: var(--green)
+  ),
+  false: (
+    bg: var(--red-pink),
+    border: var(--red),
+    text: var(--red)
+  )
+);
+
 .status {
-  // @include flex;
+  display: block;
+  max-width: 80px;
+  width: 100%;
+  padding: 4px 12px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+@each $key, $value in $status-colors {
+  .status-#{$key} {
+    background-color: map.get($value, bg);
+    border-color: map.get($value, border);
+    color: map.get($value, text);
+  }
 }

@@ -58,6 +58,16 @@ const MENU_LIST: IMenuList[] = [
         </li>
       </ul>
     </nav>
+
+    <NuxtLink to="/profile" class="aside__profile">
+      <div class="aside__avatar">
+        <NuxtImg src="/images/user.png" alt="user avatar" />
+      </div>
+      <div class="aside__info">
+        <p class="aside__info-name">Evano</p>
+        <p class="aside__info-job">Project Manager</p>
+      </div>
+    </NuxtLink>
   </aside>
 </template>
 

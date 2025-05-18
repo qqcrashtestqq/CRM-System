@@ -1,0 +1,23 @@
+@use '../global/flex' as *;
+
+.input {
+  @include flex;
+  gap: 8px;
+  padding: 8px;
+  background-color: var(--pale-blue);
+  // background-color: var(--red);
+  border-radius: 10px;
+
+  &__text {
+    width: 100%;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 12px;
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

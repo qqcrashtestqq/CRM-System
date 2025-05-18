@@ -2,8 +2,9 @@
 
 .aside {
   @include flex-column;
+
   gap: 66px;
-  padding: 36px 28px;
+  padding: 36px 28px 78px 28px;
   background-color: var(--white);
   box-shadow: var(--box-shadow);
 
@@ -30,5 +31,38 @@
   &__span {
     @include flex;
     gap: 14px;
+  }
+
+  &__profile {
+    margin-top: auto;
+  }
+
+  &__profile {
+    @include flex;
+    gap: 12px;
+  }
+
+  &__avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__info {
+    @include flex-column;
+    gap: 5px;
+    &-name {
+      font-family: Poppins;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    &-job {
+      font-family: Poppins;
+      font-weight: 400;
+      font-size: 12px;
+      color: var(--grey);
+    }
   }
 }
