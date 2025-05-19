@@ -3,39 +3,39 @@ import type { IMenuList } from '@/types/menu'
 
 const MENU_LIST: IMenuList[] = [
   {
-    text: 'home',
+    text: 'Dashboard',
     link: '/',
     icon: 'KeyIcon'
   },
   {
     text: 'Product',
     link: '/product',
-    icon: 'ProductIcon'
-    // arrow: 'ArrowIcon'
+    icon: 'ProductIcon',
+    arrow: 'ArrowIcon'
   },
   {
     text: 'Customers',
     link: '/customers',
-    icon: 'CustomerIcon'
-    // arrow: 'ArrowIcon'
+    icon: 'CustomerIcon',
+    arrow: 'ArrowIcon'
   },
   {
     text: 'Income',
     link: '/income',
-    icon: 'IncomeIcon'
-    // arrow: 'ArrowIcon'
+    icon: 'IncomeIcon',
+    arrow: 'ArrowIcon'
   },
   {
     text: 'Promote',
     link: '/promote',
-    icon: 'PromoteIcon'
-    // arrow: 'ArrowIcon'
+    icon: 'PromoteIcon',
+    arrow: 'ArrowIcon'
   },
   {
     text: 'Help',
     link: '/help',
-    icon: 'HelpIcon'
-    // arrow: 'ArrowIcon'
+    icon: 'HelpIcon',
+    arrow: 'ArrowIcon'
   }
 ]
 </script>
@@ -53,7 +53,7 @@ const MENU_LIST: IMenuList[] = [
               <Icon :name="item.icon" size="24" />
               {{ item.text }}
             </span>
-            <!-- <Icon :name="item.arrow" size="16" /> -->
+            <Icon v-if="item.arrow" :name="item?.arrow" size="16" />
           </NuxtLink>
         </li>
       </ul>
