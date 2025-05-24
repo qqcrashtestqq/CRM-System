@@ -1,0 +1,82 @@
+@use './global/flex' as *;
+
+.customers {
+  @include flex-column;
+  gap: 40px;
+
+  &__head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__info {
+    @include flex-column;
+    gap: 7px;
+  }
+
+  &__subtitle {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--green);
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  &__thead {
+    border-bottom: var(--border);
+  }
+
+  &__tr {
+    td {
+      padding: 0 12px 14px 12px;
+      font-family: Poppins;
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--grey);
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__users {
+    border-bottom: var(--border);
+
+    td {
+      padding: 20px 12px;
+      font-family: Poppins;
+      font-weight: 500;
+      font-size: 14px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__pagination {
+    @include flex-between-center;
+  }
+
+  &__text {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--soft-slate-grey);
+  }
+}

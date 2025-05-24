@@ -1,7 +1,4 @@
 .profile {
-  background-color: var(--white);
-  box-shadow: var(--box-shadow);
-  border-radius: var(--radius);
   &__form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

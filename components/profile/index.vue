@@ -1,10 +1,10 @@
 <template>
   <div class="profile">
     <form action="" class="profile__form">
-      <AppInput text="" placeholder="123" />
-      <AppInput text="" placeholder="123" />
-      <AppInput text="" placeholder="123" />
-      <AppInput text="" placeholder="123" />
+      <AppInput text="" placeholder="First Name" />
+      <AppInput text="" placeholder="Last Name" />
+      <AppInput text="" placeholder="Email" />
+      <AppInput text="" placeholder="Password" />
       <AppInput text="" placeholder="123" />
     </form>
   </div>

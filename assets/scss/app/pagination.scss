@@ -1,0 +1,15 @@
+@use '../global/flex' as *;
+
+.pagination {
+  @include flex;
+  gap: 12px;
+
+  &__button {
+    @include flex-all-center;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    border: var(--border);
+  }
+}

@@ -38,6 +38,14 @@ const MENU_LIST: IMenuList[] = [
     arrow: 'ArrowIcon'
   }
 ]
+
+const activeButtonColor = ref<number | null>(null)
+
+function activeButton(index: number) {
+  console.log(index)
+
+  activeButtonColor.value = index
+}
 </script>
 
 <template>
@@ -47,7 +55,13 @@ const MENU_LIST: IMenuList[] = [
     </NuxtLink>
     <nav class="aside__nav">
       <ul class="aside__list">
-        <li v-for="(item, index) in MENU_LIST" :key="index" class="aside__item">
+        <li
+          v-for="(item, index) in MENU_LIST"
+          :key="index"
+          class="aside__item"
+          :class="{ active: activeButtonColor === index }"
+          @click="activeButton(index)"
+        >
           <NuxtLink :to="item.link" class="aside__link">
             <span class="aside__span">
               <Icon :name="item.icon" size="24" />

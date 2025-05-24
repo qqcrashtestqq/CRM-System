@@ -1,0 +1,13 @@
+@use './global/flex' as *;
+
+.login {
+  &__form {
+    @include flex-column;
+    gap: 15px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 7px;
+  }
+}

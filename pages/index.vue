@@ -1,12 +1,7 @@
-<script lang="ts" setup>
-const user = 'Alex'
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <div class="home">
-    <h1 class="title title--subtitle">Hello {{ user }} 👋🏼</h1>
-    <AppStatus :status="true" />
-  </div>
+  <div class="home"></div>
 </template>
 
 <style lang="scss" scoped>

@@ -1,11 +1,13 @@
-@use "../global/flex" as *;
+@use '../global/flex' as *;
 
 .button {
   @include flex;
+  justify-content: center;
   gap: 14px;
   padding: 13px 10px;
   font-weight: 500;
   font-size: 14px;
+  border-radius: var(--radius);
   color: var(--grey);
   background-color: var(--white);
   border: var(--border);
