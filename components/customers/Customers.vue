@@ -1,12 +1,6 @@
 <script lang="ts" setup>
-interface IUsers {
-  userName: string
-  company: string
-  phone: string
-  email: string
-  country: string
-  status: boolean
-}
+const storeCustomers = useCustomersStore()
+const users = computed(() => storeCustomers.user)
 
 const TABLE_HEAD: string[] = [
   'Customer Name',
@@ -17,72 +11,9 @@ const TABLE_HEAD: string[] = [
   'Status'
 ]
 
-const users: IUsers[] = [
-  {
-    userName: 'Alex',
-    company: 'Google',
-    phone: '123',
-    email: '3kHtH@example.com',
-    country: 'USA',
-    status: true
-  },
-  {
-    userName: 'Alex',
-    company: '',
-    phone: '+38 (098) 291 04 34',
-    email: '3kHtH@example.com',
-    country: 'USA',
-    status: false
-  },
-  {
-    userName: 'Jane Cooper',
-    company: 'Microsoft',
-    phone: '(225) 555-0118',
-    email: 'jane@microsoft.com',
-    country: 'United States',
-    status: true
-  },
-  {
-    userName: 'Alex',
-    company: 'Google',
-    phone: '123',
-    email: '3kHtH@example.com',
-    country: 'USA',
-    status: true
-  },
-  {
-    userName: 'Alex',
-    company: '',
-    phone: '123',
-    email: '3kHtH@example.com',
-    country: 'USA',
-    status: false
-  },
-  {
-    userName: 'Jane Cooper',
-    company: 'Microsoft',
-    phone: '(225) 555-0118',
-    email: 'jane@microsoft.com',
-    country: 'United States',
-    status: true
-  },
-  {
-    userName: 'Alex',
-    company: 'Google',
-    phone: '123',
-    email: '3kHtH@example.com',
-    country: 'USA',
-    status: true
-  },
-  {
-    userName: 'Alex',
-    company: '',
-    phone: '123',
-    email: '3kHtH@example.com',
-    country: 'USA',
-    status: false
-  }
-]
+onMounted(() => {
+  storeCustomers.getCustomers()
+})
 </script>
 
 <template>
